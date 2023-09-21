@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic color change</title>
+    <style>
+        .form{
+        width: 300px;
+        height: 350px;
+        margin-top: 30px;
+        padding: 10px;
+        border: 2px solid black;
+    }
+    .red{
+        background-color: red;
+        color: white;
+        width: 300px;
+        height: 350px;
+        margin-top: 30px;
+        padding: 10px;
+        border: 2px solid black;
+    }
+    .orange{
+        background-color: orange;
+        color: white;
+        width: 300px;
+        height: 350px;
+        margin-top: 30px;
+        padding: 10px;
+        border: 2px solid black;
+    }
+    .blue{
+        background-color: blue;
+        color: white;
+        width: 300px;
+        height: 350px;
+        margin-top: 30px;
+        padding: 10px;
+        border: 2px solid black;
+    }
+    </style>
+    <script>
+        function changecolor(){
+            var x=document.getElementById("color");
+            
+        }
+    </script>
+    
+</head>
+<body>
+    <fieldset>
+        <legend>Form</legend>
+        <div>
+            <dl>
+                <dt><h3>Select</h3></dl>
+                <dd>
+                    <input type="checkbox" class="form-radio">
+                </dd>
+
+            </dl>
+        </div>
+        
+    </fieldset>
+    <div class="form" id="form">
+        <p>Register</p>
+        <dl>
+            <dt>Username:</dt>
+            <dd><input type="text"></dd>
+            <dt>Password:</dt>
+            <dd><input type="password"></dd>
+            <dt>Email:</dt>
+            <dd><input type="email"></dd>
+        </dl>
+        <button>Submit</button>
+    </div>
+</body>
+</html>

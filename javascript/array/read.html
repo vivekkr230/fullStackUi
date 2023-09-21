@@ -1,0 +1,17 @@
+<script>
+    var salary=[10000, 20000, 3000, 40000];
+    document.write(salary.toString()); // it separates with comma
+    document.write(`<br> ${salary.join("-->")}`); 
+
+    function getsalary(value){
+        return value>10000;
+    }
+
+    var result=salary.filter(getsalary);
+    document.write("<br>" + result);
+    document.write("<br>" + salary.filter(function(value){return value<10000}));
+
+    salary.map(function(value){
+        document.write(`<li>${value}</li>`)
+    });
+</script>

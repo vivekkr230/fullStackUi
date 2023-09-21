@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Focus</title>
+    <style>
+        #pass+div{
+           display: none; 
+        }
+        #pass:focus+div{
+            color: red;
+            font-size: 14px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+   <form>
+       <dl>
+           <dt>Username</dt>
+           <dd><input type="text"></dd>
+           <dt>Password</dt>
+           <dd>
+               <input type="password" id="pass">
+               <div>Password must contain 4 to 15 char</div>
+           </dd>
+       </dl>
+   </form> 
+</body>
+</html>

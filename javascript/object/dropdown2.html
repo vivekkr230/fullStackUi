@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Nested List</title>
+        <script>
+            var data=[
+                {Categories:"Electronics", Products:["TV","Mobile"]},
+                {Categories:"Fashion",Products:["Nike","Lee Boot"]}
+            ];
+            function bodyload(){
+                
+                for(var item of data){
+                    var outeroptgroup=document.createElement("optgroup");
+                    outeroptgroup.innerHTML=item.Categories;
+                    for(var name of item.Products){
+                        var options=document.createElement("option");
+                        options.innerHTML=name;
+                        outeroptgroup.appendChild(options);
+                        document.querySelector("select").appendChild(outeroptgroup);
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body onload="bodyload()">
+        <select>
+            
+        </select>
+    </body>
+</html>

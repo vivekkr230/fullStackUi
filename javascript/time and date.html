@@ -1,0 +1,12 @@
+<script>
+    // let date=new Date();
+    let date=new Date("2023-09-19");
+    let Allmonth=["Jan","Feb","Mar","Apr","May","June","July","Aug","Sep","Oct","Nov","Dec"];
+    let Alldays=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+    document.write(`
+    Year:${date.getFullYear()} <br>
+    Date:${date.getDate()} <br>
+    Day:${Alldays[date.getDay()]} <br>
+    Month:${Allmonth[date.getMonth()]}
+    `);
+</script>

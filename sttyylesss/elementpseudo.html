@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en-in">
+    <head>
+        <meta name="viewport" content="width=device-width,intial-scale=1.0">
+        <meta charset="UTF-8">
+        <title>Element Pseudo</title>
+        <style>
+            input[type="text"]:read-only{
+                cursor: not-allowed;
+            }
+            button:disabled{
+                cursor: not-allowed;
+                background-color: blanchedalmond;
+            }
+        </style>
+    </head>
+    <form>
+        <dl>
+            <dt>Username</dt>
+            <dd><input type="text" name="username" readonly value="vivek"></dd>
+            <dt>Password</dt>
+            <dd><input type="password" ></dd>
+        </dl>
+        <button >Submit</button><!--disabled lagga sakte ho to uper wala style aa jayega-->
+    </form>
+</html>

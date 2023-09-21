@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en-in">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,intial-scale=1.0">
+        <title>Amazon-Form</title>
+        <style>
+           form{
+               height: 300px;
+               width: 300px;
+               justify-content: center; 
+               align-content: center;
+               border: 1px solid rgb(209, 209, 209);
+           }
+           h2{
+               margin-left: 20px;
+           }
+           dt,dd{
+               margin-left: 20px;
+               margin-bottom: 10px;
+           }
+           button{
+               background-color: rgb(243, 188, 85);
+               width: 200px;
+           }
+           fieldset{
+               border-bottom: none;
+               border-left: none;
+               border-right: none;
+               width: 280px;
+               text-align: center;
+               margin-top: 20px;
+               color: rgb(168, 167, 167);
+               border-color: gainsboro;
+
+           }
+            .account{
+                border: 1px solid black;
+                background-color: gainsboro;
+                width: 300px;
+                padding: 5px;
+            }
+            .display{
+                display: flex;
+                justify-content: center;
+                margin-top: 20px;
+            }
+        </style>
+    </head>
+    <body>
+       
+    <div class="display">
+        <div>
+            <form>
+                <h2>
+                    Sign in
+                </h2>
+                <dl>
+                    <dt>Email or mobile phone number</dt>
+                    <dd><input type="text" name="username" placeholder="9999999999" size="28"></dd>
+                    <dd><button>continue</button></dd>
+                    <dt>By continuing, you agree to Amazon's <a href="">Conditions of Use</a> and <a href="">Privacy Notice.</a></dt>
+                </dl>
+            </form>
+            <fieldset>
+                <legend>New to amazon</legend>
+            </fieldset>
+            <p>
+                <button class="account">create an amazon account</button>
+            </p>
+        </div>
+    </div>
+    </body>
+</html>

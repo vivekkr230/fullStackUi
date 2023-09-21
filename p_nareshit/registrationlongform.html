@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Registration Form</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        .form{
+            height: 800px;
+            width: 400px;
+            padding: 10px;
+            border: 2px solid black;
+            margin-top: 40px;
+            box-shadow: 10px 10px 10px black;
+        }
+    </style>
+</head>
+<body class="container-fluid">
+    
+        <div class="d-flex justify-content-center align-content-center ">
+            <div class="form">
+                <h3 class="text-center">Registration Form</h3>
+                <div class="mt-3">
+                    <label for="username">Full Name:</label>
+                    <div>
+                        <input type="text" placeholder="Full Name" class="form-control" name="username">
+                    </div>
+                </div>
+                <div class="mt-3">
+                    <label for="emai">Email:</label>
+                    <div>
+                        <input type="email" placeholder="Email id" class="form-control" name="email">
+                    </div>
+                </div>
+                <div class="mt-3">
+                    <label for="mobileno">Mobile:</label>
+                    <div>
+                        <input type="text" placeholder="Contact Number" class="form-control" name="mobileno">
+                    </div>
+                </div>
+                <div class="mt-3">
+                    <label for="date">Data:</label>
+                    <div>
+                        <input type="text" placeholder="Date" class="form-control" name="date">
+                    </div>
+                </div>
+                <div class="mt-3">
+                    <label>Image:</label>
+                    <div>
+                        <button>choose file</button>No file choosen
+                    </div>
+                </div>
+                <div class="mt-3">
+                    <label for="password">Password:</label>
+                    <div>
+                        <input type="text" placeholder="Passwprd" class="form-control" name="password">
+                    </div>
+                </div>
+                <div class="mt-3">
+                    <label for="confirmpassword">Confirm Password:</label>
+                    <div>
+                        <input type="text" placeholder="Cofirm Password" class="form-control" name="confirmpassword">
+                    </div>
+                </div>
+                <div class="mt-3">
+                    Gender :
+                    <span><input type="radio" name="gender" value="Male"><label>Male</label></span>
+                    <span><input type="radio" name="gender" value="Female"><label>Female</label></span>
+                </div>
+                <div class="mt-3">
+                    
+                    <input type="checkbox" class="form-check-input">
+                    <label class="form-check-label">I've read and accept the Terms and condition</label>
+                    
+                </div>
+                <div class="mt-3">
+                    <button class="btn btn-warning w-60 ms-4">Already have an account</button>
+                    <button class="btn btn-success w-40 me-2">Register</button>
+                </div>
+            </div>
+        </div>
+    
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>

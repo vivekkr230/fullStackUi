@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clock ticking</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <style>
+        .container{
+            display: flex;
+            justify-content: space-between;
+            background-color: red;
+            color: white;
+            font-size: 25px;
+            
+        }
+    </style>
+    <script>
+        function clock(){
+            let time=new Date();
+            document.getElementById("time").innerHTML=time.toLocaleTimeString();
+        }
+        function bodyload(){
+            setInterval(clock, 1000);
+            var now=new Date();
+            var msg=document.getElementById("msg");
+            var icon=document.getElementById("icon");
+            var hrs=now.getHours();
+            if(hrs>=0 && hrs<=12){
+                icon.className="bi bi-brightness-alt-high-fill";
+                msg.innerHTML="Good Morning"
+            }
+            else if(hrs>=13 && hrs<=18){
+                icon.className="bi bi-brightness-high-fill";
+                msg.innerHTML="Good Evening"
+            }
+            else{
+                icon.className="bi bi-sunset";
+                msg.innerHTML="Good Night"
+            }
+
+        }
+    </script>
+</head>
+<body  onload="bodyload()">
+    <div class="container">
+        <span>Amazon Shopping</span>
+        <span>
+            <span id="icon"></span>
+            <span id="msg"></span>
+        </span>
+        <span id="time"></span>
+    </div>
+</body>
+</html>

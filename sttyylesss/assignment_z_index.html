@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>z-index-assignment</title>
+    <style>
+        .image{
+            width: 80%;
+            height: 300px;
+            border: 1px solid white;
+            border-radius: 10px;
+        }
+        
+        .spa{
+            font-size: 15px;
+            font-weight: bold;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin-top: 5px;
+            display: flex;
+            justify-content: center;
+        }
+        .valid{
+            font-size: 15px;
+            font-weight: lighter;
+            color: gray;
+            margin-top: 5px;
+            display: flex;
+            justify-content: center;
+        }
+        .view{
+            border: 1px solid black;
+            background-color: black;
+            color: white;
+            text-align: center;
+            width: 80px;
+            padding: 5px;
+            border-radius:10px ;
+        }
+        .offer{
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+        .magic{
+            position: absolute;
+
+        }
+        .overlap{
+            background-color: white;
+            border: 1px solid white;
+            height: 100px;
+            width:250px;
+            border-radius: 10px;
+            z-index: 1;
+            margin-left: 30px;
+            margin-top: 250px;
+        }
+        .card-image{
+            z-index: 0;
+            
+        }
+        .card{
+            height: 400px;
+            width: 410px;
+           margin-left: 20px;
+           margin-top:40px ;
+        }
+        .container{
+            display: flex;
+            flex-wrap: wrap;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+       <div class="card">
+            <div class="card-image magic">
+                <img src="../../public/images/spa.jpeg" class="image">
+            </div>
+            <div class="overlap magic">
+                <div class="text">
+                    <div class="spa">spa package offer</div>
+                    <div class="valid">valid through jan 2023</div>
+                </div>
+                <div class="offer">
+                    <div class="view">view offer</div>
+                </div>
+            </div>
+       </div>
+       <div class="card">
+            <div class="card-image magic">
+                <img src="../../public/images/lets rock.jpeg" class="image">
+            </div>
+            <div class="overlap magic">
+                <div class="text">
+                    <div class="spa">Golf tournament</div>
+                    <div class="valid">valid through may 2023</div>
+                </div>
+                <div class="offer">
+                    <div class="view">view offer</div>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-image magic">
+                <img src="../../public/images/holiday.jpeg" class="image">
+            </div>
+            <div class="overlap magic">
+                <div class="text">
+                    <div class="spa">Elivate your story</div>
+                    <div class="valid">valid through april 2023</div>
+                </div>
+                <div class="offer">
+                    <div class="view">view offer</div>
+                </div>
+            </div>
+        </div>
+       
+    </div>
+</body>
+</html>

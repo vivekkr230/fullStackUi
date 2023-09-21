@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordion</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+</head>
+<body class="container-fluid">
+    <div class="accordion" id="topic">
+        <div class="accordion-item">
+            
+            <div class="accordion-head">
+                <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#css">
+                    <h2>Css Tutorial</h2>
+                </button>
+            </div>
+            
+            <div data-bs-parent="#topic" class="accordion-body accordion collapse hide" id="css">
+                <p>This is about Css tutorial...
+                    Cascading Style Sheets is a style sheet language used for describing the presentation of a document written in a markup language such as HTML or XML. CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript
+                </p>
+            </div>
+            <div class="accordion-head">
+                <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#js">
+                    <h2>Js Tutorials</h2>
+                </button>
+
+            </div>
+            <div class="accordion-body accordion-collapse collapse hide" id="js" data-bs-parent="#topic">
+                <p>
+
+                    JavaScript, often abbreviated as JS, is a programming language that is one of the core technologies of the World Wide Web, alongside HTML and CSS. As of 2023, 98.7% of websites use JavaScript on the client side for webpage behavior, often incorporating third-party libraries
+                </p>
+            </div>
+        </div>
+
+    </div>
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>

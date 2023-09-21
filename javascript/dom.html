@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        function bodyload(){
+           document.getElementById("name2").value="Login";
+           document.getElementById("name1").value="Name";
+           document.querySelector(".photo").src="../public/images/puma.png";
+           result=document.getElementsByTagName("h2");
+           alert("total number of heading is" + result.length); 
+        }
+    </script>
+    <title>Document</title>
+</head>
+<body onload="bodyload()">
+    <img width="100px" height="100px" class="photo">
+    <div>
+        <form>
+            <h2>REGISTER</h2>
+            User name: <input type="text"> <input type="button" id="name1">
+        </form>
+    </div>
+    <div>
+        <form>
+            <h2>LoGin</h2>
+            Email: <input type="email"> <input type="button" id="name2">
+        </form>
+    </div>
+</body>
+</html>

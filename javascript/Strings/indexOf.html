@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <script>
+        function emailVerify(){
+            var email=document.getElementById("email").value;
+            var pos=email.indexOf("@");
+            
+            if(pos>2){
+                document.querySelector("h2").innerHTML="Valid Email".fontcolor('green');
+            }
+            else{
+                document.querySelector("h2").innerHTML="Invalid Email".fontcolor('red');
+            }
+        }
+    </script>
+
+</head>
+<body>
+    <fieldset>
+        <legend>Email</legend>
+        <input type="text" id="email" "> <button onclick="emailVerify()">Submit</button>
+    </fieldset>
+    <h2></h2>
+</body>
+</html>

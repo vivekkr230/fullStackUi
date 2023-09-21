@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VerifyFirstletter</title>
+    <script>
+        function letterverify(){
+            var firstletter=document.getElementById("letter").value;
+            if(firstletter.charCodeAt(0)>=65 && firstletter.charCodeAt(0)<=90){
+                document.querySelector("p").innerHTML="";
+            }
+            else{
+                document.querySelector("p").innerHTML="First letter must be Capital".fontcolor('red');
+            }
+        };
+    </script>
+</head>
+<body>
+    <fieldset>
+        <legend>Verify VerifyFirstletter</legend>
+        <div>
+            <input type="text" size="40" placeholder="First letter must be Capital letter" onkeyup="letterverify()" id="letter">
+            
+            <p></p>
+        </div>
+        
+    </fieldset>
+</body>
+</html>

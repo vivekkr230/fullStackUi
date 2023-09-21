@@ -1,0 +1,1 @@
+.container{border:2px solid red;box-shadow:2xp 2px 2px red;margin-bottom:20px;padding:20px;position:relative}.flat,dt{padding:10px}dl{display:grid;grid-template-columns:6fr 6fr}.flat{border-radius:100px;border:1px solid red;background-color:#ff0;width:40px}dt{background-color:gray;margin-bottom:10px;color:#000}.container{background-color:none}.flat,button{display:none}

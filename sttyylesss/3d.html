@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3d</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 800px;
+        }
+        img{
+            margin: 50px;
+            transition: 4s;
+            transform: scale3d(1,1,1);
+            
+        }
+        img:hover{
+            height: 300px;
+            width: 300px;
+            transition: 4s;
+            transform: scale3d(1,1,1);
+            box-shadow: 15px 15px 15px gray;
+        }
+        marquee{
+            width: 800px;
+        }
+    </style>
+</head>
+<body>
+    <marquee scrollamount="20" onmousemove="this.stop()" onmouseout="this.start()">
+        <img src="../../public/images/cropped cotton top.webp" height="100px" width="100px">
+        <img src="../../public/images/cotton print dress.webp" height="100px" width="100px">
+        <img src="../../public/images/saina nehwal.jpeg" height="100px" width="100px">
+        <img src="../../public/images/women etnic.webp" height="100px" width="100px">
+
+    </marquee>
+</body>
+</html>

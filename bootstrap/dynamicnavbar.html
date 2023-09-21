@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dynamic Nav</title>
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+        <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    </head>
+    <body class="container-fluid">
+        <nav class="navbar  navbar-expand-lg navbar-dark bg-dark mt-2">
+            <div class="container-fluid">
+                <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menulist">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <a class="navbar-brand" href="#">
+                    <span class="bi bi-cart4"></span>Amazon
+                </a>
+                
+                <div class="collapse navbar-collapse" id="menulist">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link text-danger" target="frame" href="pagination.html">
+                                <span class="bi bi-house"></span>Home
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-danger" target="frame" href="form.html">
+                                <span class="bi bi-house"></span>About
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-danger" target="frame" href="card.html">
+                                <span class="bi bi-house"></span>Contact
+                            </a>
+                        </li>
+                    </ul>
+                    <form class="input-group">
+                        <input type="text" class="form-control" placeholder="type here!!">
+                        <button class="btn btn-warning">Search</button>
+                    </form>
+                </div>
+            </div>
+
+        </nav>
+        <section>
+            <iframe name="frame" width="100%" src="intro.html" height="600px">
+
+            </iframe>
+
+        </section>
+
+
+
+
+        <script src="../node_modules/jquery/dist/jquery.js"></script>
+        <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+
+    </body>
+</html>

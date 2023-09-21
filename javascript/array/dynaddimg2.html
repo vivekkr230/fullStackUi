@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <script>
+        var prod=["../../public/images/adidas.png","../../public/images/chair.jpg","../../public/images/flora midi dress.webp"];
+        function allImg(){
+            for(var path of prod)
+            {
+                var pic=document.createElement("img");
+                pic.src=path;
+                pic.height="100";
+                pic.width="100";
+                document.getElementById("container").appendChild(pic);
+
+                var option=document.createElement("option");
+                option.text=path;
+                document.querySelector("select").appendChild(option);
+                var li=document.createElement("li");
+                li.innerHTML=path;
+                document.querySelector("ol").appendChild(li);
+            }
+        }
+    </script>
+</head>
+<body onload="allImg()">
+    <div id="container">
+        
+    </div>
+    <h2>Select Path</h2>
+    <select>
+
+    </select>
+    <h2>Image Path in list form</h2>
+    <ol>
+
+    </ol>
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon-account</title>
+    <style>
+        form{
+            border: 1px solid gainsboro;
+            height: 500px;
+            width: 300px;
+        }
+        dt,dd,h2{
+            margin-left: 20px;
+            margin-bottom: 10px;
+        }
+        dt{
+            font-weight: bolder;
+        }
+        button{
+            width: 200px;
+            background-color: rgb(243,188 ,85);
+        }
+        .display{
+            display:flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="display">
+        <div>
+            <form>
+                <h2>Create account</h2>
+                <dl>
+                    <dt>Your name</dt>
+                    <dd><input type="text" name="username" placeholder="First and last name" size="28"></dd>
+                    <dt>Mobile number or email</dt>
+                    <dd><input type="text" name="mobileno" size="28"></dd>
+                    <dt>Password</dt>
+                    <dd>
+                        <input type="password" name="password" placeholder="At least 6 characters" size="28">
+                        <div>password must be atleast 6 character</div>
+        
+                    </dd>
+                    <dt>Re-enter password</dt>
+                    <dd><input type="password" name="password" size="28"></dd>
+                    <dd><button>continue</button></dd>
+                    <dd>By continuing, you agree to Amazon's <a href="">Conditions of Use</a> and <a href="">Privacy Notice.</a></dd>
+                    <dd>
+                        Already have an account? <a href="">Sign in</a>
+                    </dd>
+                    <dd>
+                        Buying for work? <a href="">create a free business account</a>
+                    </dd>
+                </dl>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

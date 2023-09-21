@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Group</title> 
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+</head>
+<body class="container-fluid">
+    <div class="input-group w-50">
+        <select>
+            <option>All</option>
+            <option>Mobile</option>
+            <option>Fashion</option>
+        </select>
+        <input type="text" class="form-control input-group-text">
+        <button class="btn btn-danger input-group-text">
+            <span class="bi bi-search-heart"></span>
+        </button>
+    </div>
+    <h2 class="mt-4">Append</h2><!--Append bringing something on rhs-->
+    <div class="input-group">
+        <input type="text" class="form-control">
+        <span class="input-group-text">@gamil.com</span>
+    </div>
+
+    <h2 class="mt-4">Append and Prepond</h2>
+    <div class="input-group">
+        <span class="input-group-text">&#8377;</span>
+        <input class="form-control" type="text">
+        <span class="input-group-text">.00</span>
+    </div>
+
+
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>

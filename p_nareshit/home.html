@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        .detail{
+            border: 1px solid gray;
+            box-shadow: 2px 2px 2px gray;
+        }
+    </style>
+</head>
+<body class="container-fluid">
+    <div class="detail">
+        <div class="bg-primary d-flex justify-content-end">
+            <div class="">
+                <h5 class="pt-1 pb-1 text-white text-center">Details</h5>
+            </div>
+            
+            <div class="dropdown">
+                <button class="dropdown-toggle" data-bs-toggle="dropdown"><span class="bi bi-tree-fill"></span>Filter</button>
+                <div class="dropdown-menu collapse">
+                    <div class="dropdown-item">
+                        show
+                    </div>
+                    <div class="dropdown-item">
+                        hide
+                    </div>
+                    <div class="dropdown-item">
+                        hello
+                    </div>
+                </div>
+        
+                
+            </div>
+        </div>
+        <div class="m-3">
+            <table class="table table-bordered table-striped mt-3">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Id</th>
+                        <th>Course Name</th>
+                        <th>Faculty Name</th>
+                        <th>Duration</th>
+                        <th>Timing</th>
+                        <th>View</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Angular 8</td>
+                        <td>Shudhakar Sharma</td>
+                        <td>45 Days</td>
+                        <td>7:30 AM</td>
+                        <td><button class="btn btn-warning">View<span class="bi bi-eye"></span></button></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Node JS</td>
+                        <td>Samba Sir</td>
+                        <td>45 Days</td>
+                        <td>9:00 AM</td>
+                        <td><button class="btn btn-warning">View<span class="bi bi-eye"></span></button></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Java</td>
+                        <td>Hari Krishna Sir</td>
+                        <td>60 Days</td>
+                        <td>4:30 PM</td>
+                        <td><button class="btn btn-warning">View<span class="bi bi-eye"></span></button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parse</title>
+    <script>
+        function selectclick(){
+            var y=prompt("Enter the name")
+            var a=document.getElementById("age").value;
+            document.write("you will be" + (parseInt(a)+1) + "next year" + "<br>");
+            document.write(`Hi !! ${y} you will be ${(parseInt(a)+1)} next year`);
+        };
+    </script>
+</head>
+<body>
+    <dl>
+        <dt>Age</dt>
+        <dd>
+            <select id="age">
+                <option value="20">20</option>
+                <option value="30">30</option>
+                <option value="40">40</option>
+            </select>
+        </dd>
+        <button onclick="selectclick()">Submit</button>
+    </dl>
+</body>
+</html>

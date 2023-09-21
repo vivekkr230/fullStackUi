@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Behaviour and Occurance</title>
+    <style>
+        ol{
+            list-style: none;
+            display: flex;
+        }
+        li{
+            margin-right: 10px;
+            margin-left: 10px;
+        }
+        li::after{
+            content: "< <";
+            margin-right: 10px;
+            margin-left: 10px;
+        }
+        li:last-child::after{
+            content: "";
+        }
+        li::first-letter{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        input::placeholder{
+            color: green;
+            font-weight: bold;
+        }
+        p::selection{
+            background-color: yellow;
+        }
+        :root{
+            color: blue;
+        }
+        *{
+            font-weight: bolder;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" placeholder="Username">
+    <input type="password" placeholder="Password">
+    <ol>
+        <li>Home</li>
+        <li>Cart</li>
+        <li>Payment</li>
+        <li>Confirmation</li>
+    </ol>
+    <p>
+        a woman's status regarding the bearing of viable offspring: usually followed by a Roman numeral designating the number of times the woman has given birth. the .
+    </p>
+</body>
+</html>

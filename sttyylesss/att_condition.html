@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attribute-condition</title>
+    <style>
+         p[class=para]{
+            color: green;
+        }
+        p[class^=para]{
+            color: red;
+        }
+        p[class|=styles]{
+            color: yellow;
+        }
+        p[class$=para]{
+            color: aqua;
+        }
+        p[class~=styles]{
+            color: blanchedalmond;
+        }
+    </style>
+</head>
+<body>
+    <p class="para">para-1</p>
+    <p class="para styles">para-2</p>
+    <p class="parastyles">para-3</p>
+    <p class="styles">para-4</p>
+    <p class="styles para">para-5</p>
+    <p class="styles-para">para-6</p>
+    <p class="stylespara">para-7</p>
+    <p class="para-styles">para-8</p>
+</body>
+</html>

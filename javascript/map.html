@@ -1,0 +1,16 @@
+<script>
+    var collection=new Map();
+    collection.set("Name","Vivek");
+    collection.set(2,"surname");
+    document.write(`${collection.get("Name")}`);
+    document.write(collection.get(2));
+    for(var key of collection.keys()){
+        document.write(key + "<br>");
+    }
+    for(var value of collection.values()){
+        document.write(value + "<br>");
+    }
+    for(var entry of collection.entries()){
+        document.write(entry + "<br>");
+    }
+</script>

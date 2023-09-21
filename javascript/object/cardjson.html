@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Json Card</title>
+        <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css">
+        <link rel="stylesheet" href="../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+        <script>
+            var id=[
+                {Name:"Kashish" ,Age:23 , Gender:"Male", image="../../public/images/flora print dress.webp"}
+            ];
+            function display(){
+                
+                for(var data of id){
+                    var card=document.createElement("div");
+                    card.className="card w-25 m-2 p-2";
+                    card.innerHTML=`
+                        
+                        <img src="${data.image}" width="100" class="card-img-top">
+                        <div class="card-header">
+                            <h2>${data.Name}</h2>
+                        </div>
+                        <div class="card-body">
+                            <p>${data.Gender}</p>
+
+                        </div>
+                        <div class="card-footer">
+                            <p>${data.Age}</p>
+                        </div>
+                    `;
+                    document.getElementById("catalog").appendChild(card);
+                }
+            };
+        </script>
+    </head>
+    <body onload="display()" class="container-fluid">
+        <div class="d-flex flex-wrap" id="catalog">
+            
+        </div>
+        
+    </body>
+</html>

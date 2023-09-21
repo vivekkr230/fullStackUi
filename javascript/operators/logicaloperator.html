@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css">
+    <title>Logical Operator</title>
+    <script>
+        var user=[
+            {username:"david"},
+            {username:"david1"},
+            {username:"jhon1"},
+            {username:"jhon11"}
+        ];
+        function verifyUser(){
+            var userid=document.getElementById("txtEnter").value;
+            var namemsg=document.getElementById("txtVerify");
+            for(var users of user){
+                if(users.username===userid){
+                    namemsg.innerHTML="Already Taken-Try Another";
+                    namemsg.className="text-danger";
+                    break;
+                }
+                else{
+                    namemsg.innerHTML="Name Available";
+                    namemsg.className="text-success";
+                }
+            }
+        }
+    </script>
+</head>
+<body class="container-fluid">
+    <div>
+        <h2>Register User</h2>
+        <dl>
+            <dt>UserName:</dt>
+            <dd><input type="text" id="txtEnter" onkeyup="verifyUser()"></dd>
+            <dt id="txtVerify"></dt>
+        </dl>
+    </div>
+</body>
+</html>

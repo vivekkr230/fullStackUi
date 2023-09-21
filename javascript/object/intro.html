@@ -1,0 +1,26 @@
+<script>
+    let identification={
+        "name":"",
+        "age":0,
+        "gender":"",
+        "employeed":false,
+        "salary":0,
+        "expences":0,
+        "saving":function(){
+            return this.salary-this.expences;
+        },
+        "display":function(){
+            document.write(`Name:${this.name}<br>Age:${this.age}<br>Gender:${this.gender}<br> Employeed:${this.employeed}<br> Salary:${this.salary}<br>Expences:${this.expences}<br>Saving:${this.saving()}`)
+        }
+        
+    }
+    identification.name="Vivek";
+    identification.age=23;
+    identification.gender="Male";
+    identification.employeed=false;
+    identification.salary=400000;
+    identification.expences=20000;
+    identification.saving();
+    identification.display();
+
+</script>

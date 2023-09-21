@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Json Data</title>
+    <script>
+        var products=[
+            {Name:"Samsung TV", Price:10000, Preview:"../../public/images/badminton.jpeg"},
+            {Name:"Dress", Price:20000, Preview:"../../public/images/badminton.jpeg"},
+            {Name:"logo", Price:100000, Preview:"../../public/images/badminton.jpeg"}
+        ];
+        function display(){
+            for(var item of products)
+            {
+                var trow=document.createElement("tr");
+                var tdname=document.createElement("td");
+                var tdprice=document.createElement("td");
+                var tdphoto=document.createElement("td");
+
+                tdname.innerHTML=item.Name;
+                tdprice.innerHTML=item.Price;
+                var pic=document.createElement("img");
+                pic.src=item.Preview;
+                pic.width="100";
+                pic.height="100";
+                tdphoto.appendChild(pic);
+
+                trow.appendChild(tdname);
+                trow.appendChild(tdprice);
+                trow.appendChild(tdphoto);
+
+                document.querySelector("tbody").appendChild(trow);
+            }
+        }
+    </script>
+</head>
+<body onload="display()">
+    <table border="1" width="800">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Preview</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+        </tbody>
+    </table>
+</body>
+</html>

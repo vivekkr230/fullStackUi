@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>z-index</title>
+    <style>
+        .card{
+            height: 150px;
+            width: 150px;
+            position: absolute;
+        }
+        .green-card{
+            border: 1px solid green;
+            background-color: green;
+            z-index: 2;
+            margin-top: 100px;
+            margin-left: 100px;
+            background-image: url(../../public/images/oversized\ tshirt.webp);
+        }
+        .red-card{
+            border: 1px solid red;
+            background-color: red;
+            z-index: 1;
+            margin-top: 50px;
+            margin-left:50px ;
+            background-image: url(../../public/images/flora\ print\ dress.webp);
+        }
+        .yellow-card{
+            border: 1px solid yellow;
+            background-image:url(../../public/images/cropped\ cotton\ top.webp);
+            
+            z-index: 0;
+        }
+        .green-card:hover{
+            margin-left: 400px;
+            height: 400px;
+            width: 400px;
+            transition: 3s;
+            background-image: url(../../public/images/oversized\ tshirt.webp);
+            background-size: cover;
+        }
+        .yellow-card:hover{
+            margin-left: 400px;
+            height: 400px;
+            width: 400px;
+            transition: 3s;
+            background-size: cover;
+            background-image:url(../../public/images/cropped\ cotton\ top.webp);
+           
+        }
+        .red-card:hover{
+            margin-left: 400px;
+            height: 400px;
+            width: 400px;
+            transition: 3s;
+            background-size: cover;
+            background-image: url(../../public/images/flora\ print\ dress.webp);
+       
+        }
+    </style>
+</head>
+<body>
+    <div class="card green-card">
+
+    </div>
+    <div class="card red-card">
+
+    </div>
+    <div class="card yellow-card">
+
+    </div>
+</body>
+</html>

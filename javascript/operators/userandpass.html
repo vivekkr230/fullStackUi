@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css">
+    <title>Logical Operator</title>
+    <script>
+        var user=[
+            {username:"david",password:"david"},
+            {username:"david1",password:"12345"},
+            {username:"jhon1",password:"12345"},
+            {username:"jhon11",password:"jhon11"}
+        ];
+        function verifyUser(){
+            var userid=document.getElementById("txtEnter").value;
+            
+            var pass=document.getElementById("txtPassword").value;
+            var namemsg=document.getElementById("txtVerify");
+            for(var users of user){
+                if(users.username===userid && users.password===pass){
+                    
+                    document.write("<h2>login success</h2>");
+                }
+                else{
+                    namemsg.innerHTML="invalid username";
+                }
+            }
+        };
+    </script>
+</head>
+<body class="container-fluid">
+    <div>
+        <h2>Register User</h2>
+        <dl>
+            <dt>UserName:</dt>
+            <dd><input type="text" id="txtEnter"></dd>
+            <dt>Password:</dt>
+            <dd><input type="password" id="txtPassword"></dd>
+        </dl>
+    </div>
+    <button onclick="verifyUser()">Submit</button>
+    <h2 id="txtVerify" class="text-center text-danger"></h2>
+</body>
+</html>

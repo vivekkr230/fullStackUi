@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RandomCodeGenerator</title>
+    <script>
+        function Generatecode(){
+            var a=Math.random() *10;
+            var b=Math.random() *10;
+            var c=Math.random() *10;
+            var d=Math.random() *10;
+            var e=Math.random() *10;
+
+            return `${Math.round(a)} ${Math.round(b)} ${Math.round(c)} ${Math.round(d)} ${Math.round(e)}`
+        }
+        function bodyload(){
+            var random=document.getElementById("random");
+            random.innerHTML=Generatecode();
+        }
+    </script>
+</head>
+<body onload="bodyload()">
+    <fieldset>
+        <legend>Form</legend>
+        <dl>
+            <dt>Name</dt>
+            <dd><input type="text"></dd>
+            <dt>Password</dt>
+            <dd><input type="password"></dd>
+            <dt>Verify</dt>
+            <dd id="random"></dd>
+        </dl>
+        <button>Login</button>
+    </fieldset>
+</body>
+</html>

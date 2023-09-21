@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attribute</title>
+    <style>
+        p[id]{
+            color: red;
+        }
+        input[type=button]{
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <p id="p-1">para-1</p>
+    <p>para-2</p>
+    <p id="p-3">para-3</p>
+    <p>para-4</p>
+    <form>
+        <dl>
+            <dt>Username</dt>
+            <dd><input type="text" name="username"></dd>
+            <dt>Age</dt>
+            <dd><input type="number"></dd>
+            <input type="button" value="submit">
+            <input type="button" value="reset">
+        </dl>
+    </form>
+</body>
+</html>

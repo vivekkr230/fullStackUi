@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FakeStoreApiImage</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+
+    <script>
+        function imageload(url){
+            fetch(url)
+            .then(function(response){
+                return response.json;
+            })
+            .then(function(data){
+                document.getElementById("prodtitle").innerHTML=data.title;
+                document.getElementById("prodimg").src=data.image;
+            })
+        }
+        function bodyload(){
+            imageload("https://fakestoreapi.com/products/1");
+        }
+        var count=1;
+        function nextclick(){
+            count++;
+            imageload(`https://fakestoreapi.com/products/${count}`);
+        }
+        function preclick(){
+            count--;
+            imageload(`https://fakestoreapi.com/products/${count}`);
+        }
+    </script>
+</head>
+<body onload="bodyload()">
+    <div class="container-fluid">
+        <div class="d-flex justify-content-center align-items-center">
+            <div class="card" style="height: 400px; width: 400px;">
+                <div class="card-header">
+                    <h2 id="prodtitle"></h2>
+                </div>
+                <div class="card-body">
+                    <img id="prodimg">
+                    <p></p>
+                </div>
+                <div class="card-footer text-center">
+                    <button class="btn btn-danger" onclick="preclick()">
+                        <span class="bi bi-chevron-bar-left"></span>
+                    </button>
+                    <button class="btn btn-danger" onclick="nextclick()">
+                        <span class="bi bi-chevron-bar-right"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

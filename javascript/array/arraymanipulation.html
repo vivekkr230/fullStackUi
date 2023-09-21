@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Manipulation</title>
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script>
+        var cities=["delhi","agra","kolkata"];
+        function cityall(){
+            document.getElementById("cleancityname").innerHTML="";
+            
+            for(var city of cities){
+                var cname=document.createElement("option");
+                cname.text=city;
+                document.querySelector("select").appendChild(cname);
+            }
+        }
+        function bodyload(){
+            cityall();
+        }
+        function addcity(){
+            var cityvalue=document.getElementById("cityname").value;
+            var cityindex=cities.indexOf(cityvalue);
+            if(cityindex==-1){
+                cities.push(cityvalue);
+                alert(`${cityvalue} added to list`);
+                cityall();
+                document.getElementById("cityname").value="";
+            }
+            else{
+                alert(`you have entered existing city`);
+            }
+        }
+        function removecity(){
+            var selectedcity=document.getElementById("cleancityname").value;
+            var indexofcity=cities.indexOf(selectedcity);
+            
+            cities.splice(indexofcity,1);
+            alert(`${selectedcity} removed`);
+            cityall();
+            document.getElementById("cleancityname").value="";
+        }
+        function reverse(){
+            cities.sort();
+            cities.reverse();
+            cityall();
+        }
+        function sort(){
+            cities.sort();
+            cityall();
+        }
+    </script>
+</head>
+<body onload="bodyload()">
+    <h2>Array Manipulation</h2>
+    <div>
+        <div class="row">
+            <div class="col-3">
+                <div class="input-group">
+                    <input type="text" id="cityname">
+                    <button onclick="addcity()">Add</button>
+
+                </div>
+            </div>
+            <div class="col-9">
+                <h2>Cities List</h2>
+                <div class="input-group">
+                    <select class="form-select" id="cleancityname">
+
+                    </select>
+                    <button class="btn btn-danger" onclick="removecity()">Remove</button>
+                    <button class="btn btn-warning" onclick="reverse()">Reverse</button>
+                    <button class="btn btn-primary" onclick="sort()">Sort</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

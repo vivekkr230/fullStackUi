@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Even Number</title>
+    <script>
+        function SubmitClick(){
+            var n=document.getElementById("txt").value;
+            var msg=document.getElementById("msg");
+            if(parseInt(n)%2==0){
+                msg.innerHTML="Even Number";
+            }
+            else{
+                msg.innerHTML="Odd Number";
+            }
+        }
+    </script>
+</head>
+<body>
+    Even Number:
+    <input type="text" id="txt">
+    <button onclick="SubmitClick()">Submit</button>
+    <p id="msg">
+        
+    </p>
+</body>
+</html>

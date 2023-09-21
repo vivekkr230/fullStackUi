@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nav</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+</head>
+<body>
+   <h2>Nav Bar</h2>
+   <ul class="nav nav-tabs">
+        <li class="nav-item"><a href="#bio" class="nav-link" data-bs-toggle="tab">Bio</a></li>
+        <li class="nav-item"><a href="#image" class="nav-link" data-bs-toggle="tab">Image</a></li>
+        <li class="nav-item"><a href="#desc" class="nav-link" data-bs-toggle="tab">Description</a></li>
+    
+    
+    </ul> 
+    <div class="tabcontent">
+        <div class="tab-pane show fade active " id="bio">
+            <dl>
+                <dt>Name:</dt>
+                <dd>Patta Nahi</dd>
+                <dt>Address</dt>
+                <dd>Kya karoge jaan kee</dd>
+            </dl>
+        </div>
+        <div class="tab-pane fade" id="image">
+            <img src="../public/images/Printed A-line Skirt.webp" style="width: 200px; height: 200px;">
+        </div>
+        <div class="tab-pane fade" id="desc">
+            <p>This is about the dress</p>
+        </div>
+    </div>
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    
+</body>
+</html>

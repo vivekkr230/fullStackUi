@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Json Demo</title>
+    <script>
+        var product=[
+            {name:"Dress",price:500,image="../../public/images/brooks.png"},
+        ];
+        function display(){
+            for(var description of product){
+                var trow=document.createElement("tr");
+                var tname=document.createElement("td");
+                var tprice=document.createElement("td");
+                var timage=document.createElement("td");
+
+                tname.innerHTML=description.name;
+                tprice.innerHTML=description.price;
+                var pic=document.createElement("img");
+                pic.src=description.image;
+                pic.height="100";
+                pic.width="100";
+                
+                timage.appendChild(pic);
+
+                trow.appendChild(tname);
+                trow.appendChild(tprice);
+                trow.appendChild(timage);
+
+                document.querySelector("tbody").appendChild(trow);
+            }
+        }
+    </script>
+</head>
+<body onload="display()">
+    <table border="1" width="500">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Image</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+</body>
+</html>

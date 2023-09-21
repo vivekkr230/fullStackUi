@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stringmaipulation</title>
+    <script>
+        function changeString(){
+            var sentence=document.getElementById("user").value;
+            var firstletter=sentence.charAt(0);
+            var restletter=sentence.substring(1);
+            var finalsentence=firstletter.toUpperCase() + restletter.toLowerCase();
+            document.getElementById("user").value=finalsentence;
+        }
+    </script>
+</head>
+<body>
+    <fieldset>
+        <legend>Stringmaipulation</legend>
+        <dl>
+            <dt>Username</dt>
+            <dt><input type="text" id="user" onblur="changeString()"></dt>
+        </dl>
+    </fieldset>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>registration form</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        .form{
+            margin-top: 50px;
+            height: 450px;
+            width: 450px;
+            border: 1px solid black;
+            padding: 22px;
+            box-shadow: 10px 10px 10px black;
+        }
+
+    </style>
+</head>
+<body>
+   <div class="d-flex justify-content-center align-content-center">
+       <div class="form">
+           <h3 class="m-4 text-center">Please Login Your Account</h3>
+           <div>
+               
+               <label for="email" class="m-2"><h6>Email:</h6></label>
+               <div class="input-group m-2">
+                   <button class="bi bi-person-fill"></button>
+                   <input type="email" name="email" class="form-control" placeholder="Email id">
+                   <button class="bi bi-star-fill"></button>
+               </div>
+           </div>
+           <div>
+               <label for="password" class="m-2"><h6>Password:</h6></label>
+               <div class="input-group m-2" >
+                   <button class="bi bi-lock-fill"></button>
+                   <input type="password" class="form-control" name="password" placeholder="Password">
+                   <button class="bi bi-star-fill"></button>
+               </div>
+           </div>
+           <div>
+               <div class="button d-flex justify-content-between mt-4">
+                    <div>
+                        <button class="btn btn-warning mt-4">
+                            <span class="bi bi-person-fill-add me-2"></span>Sign Up
+                        </button>
+                    </div>
+               
+                
+                    <div>
+                        <button class="btn btn-success mt-4">
+                            <span class="bi bi-box-arrow-in-right me-2"></span>Sign IN
+                        </button>
+                    </div>
+               </div>
+           </div>
+        </div>
+   </div>
+   
+
+    
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>

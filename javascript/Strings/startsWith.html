@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StartsWith</title>
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css">
+    
+    <script>
+        function verifyCard(){
+            var text=document.getElementById("cardnum").value;
+            var Cardimg=document.getElementById("cardimg");
+            if(text.startsWith("4444"))
+            {
+                Cardimg.src= "../../public/images/visa.png";
+            }
+            else if(text.startsWith("5555")){
+                Cardimg.src="../../public/images/master.png";
+            }
+            else{
+                Cardimg.src="";
+                Cardimg.alt="N/A";
+            }
+        }
+    </script>
+</head>
+<body class="container-fluid">
+    <h6>Card Detail</h6>
+    <div class="input-group">
+        
+        <input type="text" onkeyup="verifyCard()" id="cardnum" class="form-control">
+        <img class="input-group-text" class="img-fluid" id="cardimg" width="100px" height="50px">
+
+    </div>
+</body>
+</html>
