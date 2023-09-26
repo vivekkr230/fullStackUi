@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <script>
+        function Calculate(){
+            document.getElementById("amt").value=parseInt(document.getElementById("pAmt").value);
+            document.getElementById("rate").value=parseInt(document.getElementById("pRate").value);
+            document.getElementById("year").value=parseInt(document.getElementById("pYear").value);
+        }
+        function CalculateInterest(){
+            var p=document.getElementById("amt").value;
+            var r=document.getElementById("rate").value;
+            var n=document.getElementById("year").value;
+            document.getElementById("value").innerHTML=`<h2>The Total Ammount is:</h2> ${p*r*(1+r)*n/((1+r)*n-1)}`;
+        }
+        function ValueChange(){
+            document.getElementById("pAmt").value=parseInt(document.getElementById("amt").value);
+            document.getElementById("pRate").value=parseInt(document.getElementById("rate").value);
+            document.getElementById("pYear").value=parseInt(document.getElementById("year").value);
+        }
+    </script>
+</head>
+<body class="container-fluid">
+   <div>
+       <div class="row mt-4">
+           <div class="col">
+                <div>
+                    <dl class="input-group">
+                        <dt>Amount: </dt>
+                        <dd><input type="text" id="amt" onblur="ValueChange()"></dd>
+                    </dl>
+                </div>
+           </div>
+           <div class="col">
+                <div>
+                    <dl class="input-group">
+                        <dt>Rate: </dt>
+                        <dd><input type="text" id="rate" onblur="ValueChange()"></dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="col">
+                <div>
+                    <dl class="input-group">
+                        <dt>Year: </dt>
+                        <dd><input type="text" id="year" onblur="ValueChange()"></dd>
+                    </dl>
+                </div>
+            </div>
+       </div>
+       <div class="text-center">
+           <button class="btn btn-primary" onclick="CalculateInterest()">Submit</button>
+       </div>
+   </div>
+   <div>
+       <div class="row mt-4">
+            <div class="col">
+                50000<input type="range" min="50000" max="4000000" value="50000" id="pAmt" onchange="Calculate()">4000000
+            </div>
+            <div class="col">
+                10<input type="range" min="10" max="21" value="10" step="0.5" id="pRate" onchange="Calculate()">21
+            </div>
+            <div class="col">
+                1<input type="range" min="1" max="10" value="1" id="pYear" onchange="Calculate()">10
+            </div>
+       </div>
+   </div>
+   <h2 id="value" class="mt-4 text-success"></h2>
+</body>
+</html>

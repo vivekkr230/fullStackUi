@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MultiLevel Statement</title>
+    <script>
+        var CarDetail={
+            cardnum:4444555566667777,
+            cvv:234,
+            year:2023
+        };
+        function VerifyDetail(){
+            var card=document.getElementById("Cardno").value;
+            var cvv=document.getElementById("cvv").value;
+            var year=document.getElementById("year").value;
+            var msg=document.getElementById("msg");
+            if(CarDetail.cardnum==card){
+                if(CarDetail.cvv==cvv){
+                    if(CarDetail.year==year){
+                        document.write(`Payment Success..`);
+                    }
+                    else{
+                        msg.innerHTML="Invalid Year"
+                    }
+                }
+                else{
+                    msg.innerHTML="Invalid Cvv";
+                }
+            }
+            else{
+                msg.innerHTML="Invalid Detail";
+            }
+        }
+        function VerifyCard(){
+            var card=document.getElementById("Cardno").value;
+            if(CarDetail.cardnum==card){
+                document.getElementById("cvv").disabled=false;
+            }
+            else{
+                document.getElementById("cvv").disabled=true;
+            }
+        }
+        function Verifycvv(){
+            var cvv=document.getElementById("cvv").value;
+            if(CarDetail.cvv==cvv){
+                document.getElementById("year").disabled=false;
+            }
+            else{
+                document.getElementById("year").disabled=true;
+            }
+        }
+        function VerifyYear(){
+            var year=document.getElementById("year").value;
+            if(CarDetail.year==year){
+                document.querySelector("button").disabled=false;
+            }
+            else{
+                document.querySelector("button").disabled=true;
+            }
+        }
+    </script>
+</head>
+<body>
+    <fieldset>
+        <legend>Payment Details</legend>
+        <dl>
+            <dt>Card Numnber</dt>
+            <dd><input type="text" id="Cardno" onkeyup="VerifyCard()"></dd>
+            <dt>Cvv</dt>
+            <dd><input id="cvv" type="text" disabled onkeyup="Verifycvv()"></dd>
+            <dt>Expiry Year</dt>
+            <dd>
+                <select id="year" disabled onchange="VerifyYear()">
+                    <option>2021</option>
+                    <option>2022</option>
+                    <option>2023</option>
+                </select>
+            </dd>
+        </dl>
+        <button onclick="VerifyDetail()" disabled>Pay</button>
+    </fieldset>
+    
+    <h2 id="msg" align="center">
+
+    </h2>
+</body>
+</html>

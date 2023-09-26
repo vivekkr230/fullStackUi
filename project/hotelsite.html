@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <title>Document</title>
+    <script>
+        function Calculate(){
+            var nop=paeseInt(document.getElementById("noOfPerson").value);
+            var nod=parseInt(document.getElementById("noOfDays").value);
+            var cost=0;
+            var amenities=0
+            if(nop<=2 && delux.checked){
+                cost=2*2500;
+            }
+            if(nop<=2 && suite.checked){
+                cost=2*4000;
+            }
+            if(ac.checked){
+                amenities=1000;
+                cost+=amenities;
+            }
+            if(locker.checked){
+                amenities=300;
+                cost+=amenities;
+            }
+            if(ac.checked && locker.checked){
+                amenities=1000+300;
+                cost+=amenities;
+            }
+            document.getElementById("show").innerHTML=cost;
+        }
+       
+    </script>
+</head>
+<body>
+    <div>
+        <h2>Hotel Registration Form</h2>
+    </div>
+    <div class="accordion" id="custdetail">
+        <div class="accordion-item">
+            <div class="accordion-head" >
+               <button class="accordion-button"  data-bs-toggle="collapse" data-bs-target="#detail">
+                    
+                    <h3>Customer info</h3>
+                    
+                </button>
+            </div>
+            <div class="accordion-body accordion collapse hide" id="detail" data-bs-parent="#custdetail">
+                <div class="row">
+                    <div class="col">
+                        <dl>
+                            <dt>Customer Name:</dt>
+                            <dd></dd>
+                            <dt>Check In Date:</dt>
+                            <dd></dd>
+                            <dt>Total No Of Days:</dt>
+                            <dd></dd>
+                            <dt>Total No Of Persons:</dt>
+                            <dd></dd>
+                        </dl>
+                    </div>
+                    <div class="col">
+                        <dl>
+                            <dd><input type="text"></dd>
+                            <dd><input type="date"></dd>
+                            <dd><input type="text" id="noOfDays"></dd>
+                            <dd><input type="text" id="noOfPerson"></dd>
+                        </dl>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="accordion" id="roomselection">
+        <div class="accordion-item">
+            <div class="accordion-head">
+                <button class="accordion-button" data-bs-target="#roomtype" data-bs-toggle="collapse">
+                    <h3>Select Room Type</h3>
+                </button>
+            </div>
+            <div class="accordion-body accordion collapse hide" data-bs-parent="#roomselection" id="roomtype">
+                <div class="row">
+                    <div class="col">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <img src="" height="200px" width="60%">
+                            
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <input type="radio" name="roomname" value="delux">Delux Room
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <img src="" height="200px" width="60%">
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <input type="radio" name="roomname" value="suite">Suite Room
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="accordion" id="addon">
+        <div class="accordion-item">
+            <div class="accordion-head">
+                <button class="accordion-button" data-bs-target="#service" data-bs-toggle="collapse">
+                    <h3>Select Amenities</h3>
+                </button>
+            </div>
+            <div class="accordion-body accordion collapse hide" data-bs-parent="#addon" id="service">
+                <div class="row">
+                    <div class="col">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <img src="" height="200px" width="60%">
+                            
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <input type="checkbox" name="roomname" value="ac">A/c
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <img src="" height="200px" width="60%">
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <input type="checkbox" name="roomname" value="locker">Locker
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button onclick="Calculate()">Submit</button>
+    <h2 id="show"></h2>
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>

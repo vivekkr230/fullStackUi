@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Login</title>
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <script>
+        var id={
+            email="vivek@gmail.com",
+            phone=9999999999
+        };
+        
+        function VerifyEmailPhone(){
+            var email=document.getElementById("verifyemailandphone").value;
+            var phone=document.getElementById("verifyemailandphone").value;
+            msg=document.getElementById("msg");
+            if(email==id.email){
+                alert(`email verfied`);
+            }
+            else if(phone==id.phone){
+                alert(`phone no verified`);
+            }
+            else{
+                msg.innerHTML="Envalid Email";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="d-flex justify-content-center align-items-center">
+        
+        <dl>
+            <h2>Amazon Login</h2>
+            <div>
+                <dt>Email OR Phone</dt>
+                <dd><input type="text" class="form-content" id="verifyemailandphone"></dd>
+                <button class="btn btn-warning w-100" onclick="VerifyEmailPhone()">Confirm</button>
+                <p id="msg"></p>
+            </div>
+            <div style="display: none;" id="passwordblock">
+                <dt>Password</dt>
+                <dd><input type="text" class="form-content"></dd>
+                <button class="btn btn-warning w-100">Confirm</button>
+            </div>
+        </dl>
+    </div>
+</body>
+</html>

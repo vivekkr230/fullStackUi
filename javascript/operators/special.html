@@ -1,0 +1,31 @@
+<script>
+    class student{
+
+    }
+    class teacher{
+
+    }
+    class subject{
+
+    }
+    let roolnum=new student();
+    let name=new teacher();
+    let sname=new subject();
+
+    document.write(name instanceof student);
+    document.write("<br>");
+    document.write(sname instanceof subject);
+    document.write("<br>");
+
+    var product={
+        name:"hello",
+        price:10000
+    }
+        
+    
+    document.write(typeof product.price);
+    document.write("<br>");
+    for(var property in product){
+        document.write(`${property} ${typeof product[property]} <br>`);
+    }
+</script>
